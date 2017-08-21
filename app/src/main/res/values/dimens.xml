@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_dimen">10dp</dimen>
+    <dimen name="title_dimen">20dp</dimen>
+    <dimen name="title_margin_top">35dp</dimen>
+    <dimen name="title_margin_left">100dp</dimen>
+    <dimen name="icon_padding">20dp</dimen>
+    <dimen name="icon_margin_top">20dp</dimen>
+    <dimen name="icon_margin_left">10dp</dimen>
+    <dimen name="near_padding">12dp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HelpME</string>
+    <integer name="com_vk_sdk_AppId">6147253</integer>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="help_me_title">Помоги мне</string>
+    <string name="test_title">Вызвать скорую помощь</string>
+    <string name="near_title">Больница Семашко 5км</string>
+    <string name="near_phone">8(846)334-32-129</string>
+    <string name="title_hospital">Вызвать скорую помощь</string>
+    <string name="near_hospital">Больница Семашко 5.2 км</string>
+    <string name="hospital_fragment_title">Больницы</string>
+
+</resources>
