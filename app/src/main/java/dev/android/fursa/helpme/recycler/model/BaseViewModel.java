@@ -1,7 +1,6 @@
 package dev.android.fursa.helpme.recycler.model;
 
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,8 @@ public abstract class BaseViewModel {
     protected abstract BaseViewHolder onCreateViewHolder(View view);
 
     public enum LayoutTypes {
-        ActionItem(R.layout.event_item);
+        ActionItem(R.layout.event_item),
+        HospitalItem(R.layout.hospital_item);
 
         private final int id;
 
