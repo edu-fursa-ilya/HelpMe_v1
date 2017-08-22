@@ -8,7 +8,7 @@ import com.vk.sdk.VKSdk;
 import dev.android.fursa.helpme.di.component.ApplicationComponent;
 import dev.android.fursa.helpme.di.component.DaggerApplicationComponent;
 import dev.android.fursa.helpme.di.module.ApplicationModule;
-
+//app class
 public class MyApplication extends Application {
 
     private static ApplicationComponent sApplicationComponent;

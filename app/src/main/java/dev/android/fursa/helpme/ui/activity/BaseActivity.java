@@ -1,6 +1,7 @@
 package dev.android.fursa.helpme.ui.activity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
@@ -34,8 +35,10 @@ public abstract class BaseActivity extends MvpAppCompatActivity {
 
     }
 
+
+
     public void setToolbarTitle(String title) {
-        if(getSupportActionBar() != null) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(title);
         }
     }
@@ -66,5 +69,12 @@ public abstract class BaseActivity extends MvpAppCompatActivity {
     @Override
     public void onBackPressed() {
         removeCurrentFragment();
+    }
+
+    //Android 4.1.1 need it
+    @Override
+    public void onSaveInstanceState(Bundle bundle, PersistableBundle outPersistentState) {
+        bundle.putString("WORKAROUND_FOR_BUG_19917_KEY", "WORKAROUND_FOR_BUG_19917_VALUE");
+        super.onSaveInstanceState(bundle);
     }
 }

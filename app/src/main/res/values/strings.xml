@@ -11,5 +11,7 @@
     <string name="near_hospital">Больница Семашко 5.2 км</string>
     <string name="hospital_fragment_title">Больницы</string>
     <string name="rating">Рейтинг</string>
+    <string name="info_title">Информация</string>
+    <string name="map_title">Карта</string>
 
 </resources>

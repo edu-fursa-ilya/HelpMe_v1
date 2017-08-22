@@ -50,7 +50,6 @@
                 android:layout_marginTop="14dp"
                 android:text="@string/near_title" />
 
-
             <TextView
                 android:padding="@dimen/near_padding"
                 android:id="@+id/near_phone"

@@ -1,11 +1,9 @@
 package dev.android.fursa.helpme.recycler.holder;
 
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import dev.android.fursa.helpme.R;
-import dev.android.fursa.helpme.recycler.model.view.EventItemBodyModel;
 import dev.android.fursa.helpme.recycler.model.view.HospitalItemModel;
 
 /**
@@ -15,27 +13,23 @@ import dev.android.fursa.helpme.recycler.model.view.HospitalItemModel;
 public class HospitalItemBodyHolder extends BaseViewHolder<HospitalItemModel> {
     TextView mTitle;
     TextView mAddress;
-    TextView mRating;
 
     public HospitalItemBodyHolder(View itemView) {
         super(itemView);
 
         mTitle = (TextView) itemView.findViewById(R.id.title);
         mAddress = (TextView) itemView.findViewById(R.id.address);
-        mRating = (TextView) itemView.findViewById(R.id.rating);
     }
 
     @Override
     public void bindViewHolder(HospitalItemModel hospitalItemModel) {
         mTitle.setText(hospitalItemModel.getTitle());
         mAddress.setText(hospitalItemModel.getAddress());
-        mRating.setText(String.valueOf(hospitalItemModel.getRating()));
     }
 
     @Override
     public void unbindViewHolder() {
         mTitle.setText(null);
         mAddress.setText(null);
-        mRating.setText(null);
     }
 }

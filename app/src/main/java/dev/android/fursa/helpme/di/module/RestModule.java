@@ -5,7 +5,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import dev.android.fursa.helpme.rest.RestClient;
-
+//rest interaction
 @Module
 public class RestModule {
     private RestClient mRestClient;

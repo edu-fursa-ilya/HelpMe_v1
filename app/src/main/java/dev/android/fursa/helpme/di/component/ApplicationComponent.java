@@ -8,7 +8,9 @@ import dev.android.fursa.helpme.di.module.ManagerModule;
 import dev.android.fursa.helpme.di.module.RestModule;
 import dev.android.fursa.helpme.ui.activity.BaseActivity;
 import dev.android.fursa.helpme.ui.activity.MainActivity;
+import dev.android.fursa.helpme.ui.fragment.ActionListFragment;
 import dev.android.fursa.helpme.ui.fragment.BaseFragment;
+import dev.android.fursa.helpme.ui.fragment.HospitalListFragment;
 
 @Singleton
 @Component(modules = {ApplicationModule.class, ManagerModule.class, RestModule.class})

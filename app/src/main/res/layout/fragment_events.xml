@@ -6,6 +6,7 @@
     android:fitsSystemWindows="true"
     tools:context="dev.android.fursa.helpme.ui.fragment.ActionListFragment">
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:scrollbars="vertical"

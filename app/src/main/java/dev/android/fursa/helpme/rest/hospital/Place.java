@@ -5,7 +5,7 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Hospital {
+public class Place {
 
     @SerializedName("html_attributions")
     @Expose
@@ -54,7 +54,7 @@ public class Hospital {
 
     @Override
     public String toString() {
-        return "Hospital{" +
+        return "Place{" +
                 "htmlAttributions=" + htmlAttributions +
                 ", nextPageToken='" + nextPageToken + '\'' +
                 ", results=" + results +

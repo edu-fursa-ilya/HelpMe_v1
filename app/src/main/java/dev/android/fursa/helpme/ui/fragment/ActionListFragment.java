@@ -54,7 +54,7 @@ public class ActionListFragment extends BaseFragment {
         events.add(new EventItemBodyModel("Вызвать полицию", "Полицейский участок №10 5км", R.drawable.ic_local_police_blue_24dp, "8(846)222-31-21"));
         events.add(new EventItemBodyModel("Вызвать скорую помощь", "Больница Середавина 4.5км", R.drawable.ic_medicine_red_24dp, "8(846)444-33-21"));
         events.add(new EventItemBodyModel("Вызвать полицию", "Полицейский участок №10 5км", R.drawable.ic_local_police_blue_24dp, "8(846)222-31-21"));
-        mBaseAdapter.addFixedItems(events);
+        mBaseAdapter.addItems(events);
 
     }
 

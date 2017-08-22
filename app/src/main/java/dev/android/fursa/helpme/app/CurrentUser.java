@@ -4,6 +4,7 @@ import com.vk.sdk.VKAccessToken;
 import com.vk.sdk.VKSdk;
 public class CurrentUser {
 
+    //token UID in vk.com
     public static String getAccessToken() {
         if (VKAccessToken.currentToken() == null) {
             return null;

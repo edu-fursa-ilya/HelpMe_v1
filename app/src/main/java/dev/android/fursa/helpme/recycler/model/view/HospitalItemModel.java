@@ -14,12 +14,10 @@ public class HospitalItemModel extends BaseViewModel {
 
     private String mTitle;
     private String mAddress;
-    private Double mRating;
 
-    public HospitalItemModel(String mTitle, String mAddress, Double mRating) {
+    public HospitalItemModel(String mTitle, String mAddress) {
         this.mTitle = mTitle;
         this.mAddress = mAddress;
-        this.mRating = mRating;
     }
 
     @Override
@@ -40,16 +38,12 @@ public class HospitalItemModel extends BaseViewModel {
         return mAddress;
     }
 
-    public Double getRating() {
-        return mRating;
-    }
 
     @Override
     public String toString() {
         return "HospitalItemModel{" +
                 "mTitle='" + mTitle + '\'' +
                 ", mAddress='" + mAddress + '\'' +
-                ", mRating='" + mRating + '\'' +
                 '}';
     }
 }

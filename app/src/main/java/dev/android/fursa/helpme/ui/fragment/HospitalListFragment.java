@@ -19,13 +19,12 @@ import dev.android.fursa.helpme.recycler.adapter.BaseAdapter;
 import dev.android.fursa.helpme.recycler.model.view.HospitalItemModel;
 import dev.android.fursa.helpme.rest.GoogleApiRequest;
 import dev.android.fursa.helpme.rest.RestClient;
-import dev.android.fursa.helpme.rest.hospital.Hospital;
-import dev.android.fursa.helpme.rest.hospital.HospitalResponse;
+import dev.android.fursa.helpme.rest.hospital.Place;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class HospitalFragment extends BaseFragment {
+public class HospitalListFragment extends BaseFragment {
     @Inject
     GoogleApiRequest mGoogleApiRequest;
 
@@ -34,7 +33,7 @@ public class HospitalFragment extends BaseFragment {
     private RecyclerView mRecyclerView;
     private BaseAdapter mBaseAdapter;
 
-    public HospitalFragment() {
+    public HospitalListFragment() {
 
     }
 
@@ -53,28 +52,29 @@ public class HospitalFragment extends BaseFragment {
         //http request
         hospitalResponseList = new ArrayList<>();
 
-        mGoogleApiRequest.getPlace(ApiConst.HOSPITAL_REQUEST, ApiConst.GOOGLE_API_KEY, ApiConst.LANG).enqueue(new Callback<Hospital>() {
+        mGoogleApiRequest.getPlace(ApiConst.HOSPITAL_REQUEST, ApiConst.GOOGLE_API_KEY, ApiConst.LANG).enqueue(new Callback<Place>() {
             @Override
-            public void onResponse(Call<Hospital> call, Response<Hospital> response) {
+            public void onResponse(Call<Place> call, Response<Place> response) {
                 for (int i = 0; i < response.body().getResults().size(); i++) {
                     HospitalItemModel hospitalItemModel = new HospitalItemModel(
                             response.body().getResults().get(i).getName(),
-                            response.body().getResults().get(i).getFormattedAddress(),
-                            response.body().getResults().get(i).getRating()
+                            response.body().getResults().get(i).getFormattedAddress()
                     );
 
-                    hospitalResponseList.add(hospitalItemModel);
-                    mBaseAdapter.addFixedItems(hospitalResponseList);
-                    Log.d(HospitalFragment.class.getSimpleName(), hospitalItemModel.toString());
+                        hospitalResponseList.add(hospitalItemModel);
+                        mBaseAdapter.addItemsWithoutDublicates(hospitalResponseList);
+                        Log.d(HospitalListFragment.class.getSimpleName(), hospitalItemModel.toString());
+
                 }
             }
 
             @Override
-            public void onFailure(Call<Hospital> call, Throwable t) {
+            public void onFailure(Call<Place> call, Throwable t) {
                 t.printStackTrace();
             }
         });
     }
+
 
     @Override
     protected int getMainContentLayout() {

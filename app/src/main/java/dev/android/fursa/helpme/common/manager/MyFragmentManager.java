@@ -2,9 +2,7 @@ package dev.android.fursa.helpme.common.manager;
 
 import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentTransaction;
-
 import java.util.Stack;
-
 import dev.android.fursa.helpme.ui.activity.BaseActivity;
 import dev.android.fursa.helpme.ui.fragment.BaseFragment;
 

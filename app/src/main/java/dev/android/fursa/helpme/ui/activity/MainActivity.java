@@ -2,7 +2,6 @@ package dev.android.fursa.helpme.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.vk.sdk.VKAccessToken;
@@ -16,8 +15,7 @@ import dev.android.fursa.helpme.app.MyApplication;
 import dev.android.fursa.helpme.consts.ApiConst;
 import dev.android.fursa.helpme.mvp.presenter.MainPresenter;
 import dev.android.fursa.helpme.mvp.view.MainView;
-import dev.android.fursa.helpme.ui.fragment.ActionListFragment;
-import dev.android.fursa.helpme.ui.fragment.HospitalFragment;
+import dev.android.fursa.helpme.ui.fragment.HospitalListFragment;
 
 public class MainActivity extends BaseActivity implements MainView {
 
@@ -65,6 +63,6 @@ public class MainActivity extends BaseActivity implements MainView {
     @Override
     public void signedId() {
         Toast.makeText(this, "Current uid = " + CurrentUser.getId(), Toast.LENGTH_LONG).show();
-        setContent(new HospitalFragment());
+        setContent(new HospitalListFragment());
     }
 }

@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import dev.android.fursa.helpme.recycler.model.BaseViewModel;
-
+//base view holder
 public abstract class BaseViewHolder<T extends BaseViewModel> extends RecyclerView.ViewHolder {
 
     public BaseViewHolder(View itemView) {

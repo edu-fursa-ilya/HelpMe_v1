@@ -9,7 +9,7 @@ import dev.android.fursa.helpme.recycler.model.view.EventItemBodyModel;
 
 public class EventItemBodyHolder extends BaseViewHolder<EventItemBodyModel> {
 
-    public ImageView mIcon;
+    public ImageView mIcon; //action icon
     public TextView mTitleText;
     public TextView mNearText;
     public TextView mPhoneText;
