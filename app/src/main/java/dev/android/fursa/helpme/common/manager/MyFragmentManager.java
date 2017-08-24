@@ -37,7 +37,7 @@ public class MyFragmentManager {
     }
 
     private void commitTransaction(BaseActivity activity, FragmentTransaction transaction) {
-        transaction.commit();
+        transaction.commitAllowingStateLoss();
         activity.fragmentOnScreen(mCurrentFragment);
     }
 

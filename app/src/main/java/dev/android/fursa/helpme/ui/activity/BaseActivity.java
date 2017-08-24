@@ -71,10 +71,5 @@ public abstract class BaseActivity extends MvpAppCompatActivity {
         removeCurrentFragment();
     }
 
-    //Android 4.1.1 need it
-    @Override
-    public void onSaveInstanceState(Bundle bundle, PersistableBundle outPersistentState) {
-        bundle.putString("WORKAROUND_FOR_BUG_19917_KEY", "WORKAROUND_FOR_BUG_19917_VALUE");
-        super.onSaveInstanceState(bundle);
-    }
+
 }
